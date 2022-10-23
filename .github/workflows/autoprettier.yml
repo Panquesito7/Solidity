@@ -42,4 +42,4 @@ jobs:
         if: steps.git-check.outputs.modified == 'true'
         run: |
           git commit -am "🎨 Format Solidity code with Prettier"
-          git push HEAD:$GITHUB_REF_NAME || true
+          git push --force origin HEAD:$GITHUB_REF || true
